@@ -1,0 +1,184 @@
+<div class="container mt-5 py-5" style="background-color: #1b29500d;">
+    <h3 class="text-center">Shopping Cart</h3>
+    <div class="row g-0">
+        <div class="card-body ">
+
+            <table class="table container mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+
+                        <th scope="col">Action</th>
+                        <th scope="col">Product Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+
+                        <td>{{ product.name }}</td>
+                        <td>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-info mx-2" type="button"
+                                        (click)="decreaseQuantity()">-</button>
+                                </div>
+                                <input type="number" class="text-center rounded-3 w-25 mx-2"
+                                    [(ngModel)]="quantity" min="0" (ngModelChange)="updatePrice()">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button"
+                                        (click)="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>₹{{product.price * quantity}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn btn-primary" routerLink="/home">Checkout</button>
+              </div>
+            
+    
+        </div>
+
+       
+      
+    </div>
+   
+  </div>
+<!-- 
+<section class="vh-100" style="background-color: #1b29500d">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;background-color: antiquewhite;">
+                    <div class="row g-0">
+                        <h5 class="text-black py-4 h5 text-center">
+                            Shopping Cart
+                        </h5>
+                        <div class="card-body ">
+
+
+                            <table class="table container mt-5">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product Name</th>
+
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Product Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of products">
+
+                                        <td>{{ product.name }}</td>
+                                        <td>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-info mx-2" type="button"
+                                                        (click)="decreaseQuantity()">-</button>
+                                                </div>
+                                                <input type="number" class="text-center rounded-3 w-25 mx-2"
+                                                    [(ngModel)]="quantity" min="0" (ngModelChange)="updatePrice()">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button"
+                                                        (click)="increaseQuantity()">+</button>
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+
+
+
+                                        <td>{{price * quantity}}</td>
+
+
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        
+                        </div>
+
+                       
+                      
+                    </div>
+                   
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</section> -->
+
+
+
+<!-- <div class="container mt-5">
+    <div class="card  shadow-sm bg-info rounded-5">
+        <div class="title-header">
+
+            <div class="d-flex justify-content-center align-items-center ">
+                <h5 class="text-black py-4 h5">
+                    Shopping Cart
+                </h5>
+
+            </div>
+
+        </div>
+
+        <div class="card-body ">
+
+           
+                <table class="table container mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+
+                            <th scope="col">Action</th>
+                            <th scope="col">Product Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products">
+
+                            <td>{{ product.name }}</td>
+                            <td><div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-info" type="button"
+                                        (click)="decreaseQuantity()">-</button>
+                                </div>
+                                <input type="number" class="text-center rounded-3" [(ngModel)]="quantity" min="0"
+                                    (ngModelChange)="updatePrice()" width="5px">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button"
+                                        (click)="increaseQuantity()">+</button>
+                                </div>
+                            </div></td>
+                            
+
+
+                            
+                           
+                            <td>{{price * quantity}}</td>
+
+
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+           
+        </div>
+    </div>
+</div> -->

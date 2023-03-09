@@ -1,0 +1,22 @@
+
+<form (submit)="onSubmit()" class="container mt-5 py-5" style="background-color: #1b29500d;">
+    <h3 class="text-center">Add products</h3>
+    <div>
+      <label for="productName">Product Name:</label>
+      <input class="form-control" type="text" name="productName" [(ngModel)]="productName">
+    </div>
+    <div>
+      <label for="productPrice">Product Price:</label>
+      <input  class="form-control" type="number" name="productPrice" [(ngModel)]="productPrice">
+    </div><br>
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary">Add Product</button>
+        <button class="btn btn-success" routerLink="/product">Product Page</button>
+        <button class="btn btn-secondary" routerLink="/cart">Cart Page</button>
+        <button class="btn btn-danger" routerLink="/">logout</button>
+    </div>
+   
+  </form>
+
+
+

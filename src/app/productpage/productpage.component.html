@@ -1,0 +1,33 @@
+
+<div class="container mt-5 py-5" style="background-color: #1b29500d;">
+    <h3 class="text-center">Add products</h3>
+    <table class="table container mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+        
+            <td>{{ product.name }}</td>
+            <td>₹{{ product.price}}</td>
+            <td><Button class="btn btn-primary" (click)="changeButtonText()">{{buttonText}}</Button></td>
+          </tr>
+        
+        </tbody>
+        
+      </table>
+      <div class="d-flex justify-content-center mt-5">
+        <button class="btn btn-primary" routerLink="/cart">Cart Page</button>
+      </div>
+    
+    
+  </div>
+
+
+
+
+ 
